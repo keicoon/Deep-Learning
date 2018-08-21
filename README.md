@@ -1,7 +1,7 @@
 # Deep-Learning
 A implementation of Deep Learning
 
-# implementation List
+# Implementation List
 - DQN
     - Deep Q-Learning Network in UE4 with unreal.js
 - CapsNet
