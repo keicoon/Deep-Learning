@@ -5,7 +5,7 @@
 - 간단한 MNIST실험을 예제로 작성함
 
 ## 정리
-- [위키](https://github.com/keicoon/CapsNet/wiki)에 작성함
+- [위키](https://github.com/keicoon/Deep-Learning/wiki)에 작성함
 
 ## 내용
 - `tfjs`로 작성함
