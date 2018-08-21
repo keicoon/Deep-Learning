@@ -12,13 +12,13 @@ fc2     512                                 2	        Linear      2
 ### Experiment
 1. TracePoint
     - Train to move position A to B in 2D.
-    - ![](https://github.com/keicoon/DQN/blob/master/capture/TracePoint.PNG)
+    - ![](https://github.com/keicoon/Deep-Learning/blob/master/DQN/capture/TracePoint.PNG)
 2. DetectionObject
     - Train to detect dangerous object in variation.
-    - ![](https://github.com/keicoon/DQN/blob/master/capture/object-detection.png)
+    - ![](https://github.com/keicoon/Deep-Learning/blob/master/DQN/capture/object-detection.png)
 3. SnakeGame
     - Train snake to survive smartly more than normal algorithm.
-    - ![](https://github.com/keicoon/DQN/blob/master/capture/snakeGame.png)
+    - ![](https://github.com/keicoon/Deep-Learning/blob/master/DQN/capture/snakeGame.png)
 4. HideAndSeek
     - Train AI in HideAndSeek.
 
@@ -28,5 +28,4 @@ fc2     512                                 2	        Linear      2
 
 ### Dependencies
 1. [unreal.js](https://github.com/ncsoft/Unreal.js)
-2. [reinforce-js](https://github.com/mvrahden/reinforce-js)
-3. [@tensorflow-js](https://github.com/tensorflow/tfjs)
+2. [@tensorflow-js](https://github.com/tensorflow/tfjs)
