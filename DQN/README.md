@@ -9,22 +9,13 @@ conv2	9 x 9 x 64      3 x 3       1	    64	        ReLU        7 x 7 x 64
 fc1     7 x 7 x 64                          512	        ReLU        512
 fc2     512                                 2	        Linear      2
 ```
-### Experiment
-1. TracePoint
-    - Train to move position A to B in 2D.
-    - ![](https://github.com/keicoon/Deep-Learning/blob/master/DQN/capture/TracePoint.PNG)
-2. DetectionObject
-    - Train to detect dangerous object in variation.
-    - ![](https://github.com/keicoon/Deep-Learning/blob/master/DQN/capture/object-detection.png)
-3. SnakeGame
-    - Train snake to survive smartly more than normal algorithm.
-    - ![](https://github.com/keicoon/Deep-Learning/blob/master/DQN/capture/snakeGame.png)
-4. HideAndSeek
-    - Train AI in HideAndSeek.
+### SnakeGame
+- Train snake to survive smartly more than normal algorithm.
+- ![](https://github.com/keicoon/Deep-Learning/blob/master/DQN/capture/snakeGame.png)
 
 ### DQN Lib
-- Using `reinforce-js` casue some problems.  
-- I replace that to `dqn-tfjs` made in tsfs.  
+- I use `dqn-tfjs` made in tsfs.  
+- If you want to source just, visit gitlab-repo(https://gitlab.com/keicoon15/uneral.js-rl)
 
 ### Dependencies
 1. [unreal.js](https://github.com/ncsoft/Unreal.js)

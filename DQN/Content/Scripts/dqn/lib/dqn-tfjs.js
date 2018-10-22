@@ -1,5 +1,3 @@
-'use strict';
-
 const tf = require('./lib/fancyLoadNPM')('@tensorflow/tfjs', global);
 
 class Util {
@@ -296,4 +294,4 @@ class DQNHelper {
 
 }
 
-module.exports = DQNHelper;
+module.exports = DQNHelper

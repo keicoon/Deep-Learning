@@ -1,4 +1,4 @@
-module.exports = (elem) => {
+module.exports = () => {
 
     const DQNHelper = require('./lib/dqn-tfjs');
 

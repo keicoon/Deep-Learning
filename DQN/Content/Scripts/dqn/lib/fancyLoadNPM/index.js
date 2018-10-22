@@ -2,7 +2,9 @@ const delay = require('./delay');
 const npm = require('./npm');
 
 module.exports = (moduleName = '', global = {}) => {
-    const validModuleName = moduleName.replace(/\//g, "_");
+    let validModuleName = moduleName;
+    validModuleName = validModuleName.replace(/\//g, "_");
+    validModuleName = validModuleName.replace(/@/g, "");
 
     const __scriptPath = Context.GetDir('GameContent') + 'Scripts';
     const __srcScriptPath = `${__scriptPath}/${validModuleName}.js`;
@@ -14,7 +16,7 @@ module.exports = (moduleName = '', global = {}) => {
 
     function Prepare() {
         return new Promise(resolve => {
-            npm('browserify').then(() => npm(validModuleName)).then(() => {
+            npm('browserify').then(() => npm(moduleName)).then(() => {
                 const script = `global['cached_${validModuleName}'] = require('${moduleName}');`;
                 JavascriptLibrary.WriteStringToFile(Context, __srcScriptPath, script);
                 resolve()
@@ -33,10 +35,10 @@ module.exports = (moduleName = '', global = {}) => {
 
             b.bundle().pipe(bundleFs);
         })()`;
-        
+
         const __browsifyScriptPath = `${__scriptPath}/temp.js`;
         JavascriptLibrary.WriteStringToFile(Context, __browsifyScriptPath, script);
-        
+
         let p = JavascriptProcess.Create(
             'node',
             `${__browsifyScriptPath}`,
@@ -44,8 +46,8 @@ module.exports = (moduleName = '', global = {}) => {
         )
         console.log('browserify', __srcScriptPath, __desScriptPath)
         function pipe() {
-            let s = p.ReadFromPipe()
-            // @NOTE:
+            // @NOTE: debug
+            // let s = p.ReadFromPipe()
             // console.log(s)
         }
         return new Promise(resolve => {
